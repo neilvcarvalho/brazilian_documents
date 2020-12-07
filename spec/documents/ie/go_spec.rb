@@ -40,8 +40,27 @@ describe BRDocuments::IE::GO do
       '10.005.565-6', # PRODUTOS ALIMENTICIOS ORLANDIA  1986
       '10.314.113-8', # SAUDE INDUSTRIA E COMERCIO DE AGUA MINERALE SERVIÇOS LTDA 1999
       '10.446.955-2', # 2009
+      '11.292.907-9', # Pessoa física
     ]
   end
 
   include_examples "IE basic specs"
+
+  it 'must generate root numbers with fixed numbers' do
+    fixed_numbers = described_class.const_get('FIXED_INITIAL_NUMBERS').map(&:to_s)
+    fixed_position = described_class.fixed_digits_positions
+
+    10.times {
+      numbers = described_class.generate_root_numbers
+      expect(fixed_numbers).to include(numbers[fixed_position..1].join)
+    }
+  end
+
+  it 'must generate new numbers including initial fixed numbers' do
+    number = described_class.generate
+
+    regexp = %r{\A#{described_class.const_get('FIXED_INITIAL_NUMBERS').join('|')}}
+
+    expect(number).to match(regexp)
+  end
 end
