@@ -13,6 +13,7 @@ describe BRDocuments::IE::CE do
       060000015
       06.000.001-5
       06000001-5
+      070066515
     )
 
     @invalid_numbers = %w(
@@ -38,6 +39,7 @@ describe BRDocuments::IE::CE do
       '06.276959-6', # ESMALTEC S A
       '06.666801-8', # CGTF CENTRAL GERADORA TERMELETRICA FORTALEZA S A
       '06.859236-1', # COMPANHIA DE AGUA E ESGOTO DO CEARA CAGECE
+      '07.006651-5', # IMPERIO COMERCIAL DE HORTIFRUTIGRANJEIROS
     ]
   end
 
