@@ -41,6 +41,7 @@ describe BRDocuments::IE::GO do
       '10.314.113-8', # SAUDE INDUSTRIA E COMERCIO DE AGUA MINERALE SERVIÇOS LTDA 1999
       '10.446.955-2', # 2009
       '11.292.907-9', # Pessoa física
+      '20.006.272-7', # Pessoa física
     ]
   end
 
