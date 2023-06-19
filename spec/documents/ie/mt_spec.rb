@@ -42,5 +42,5 @@ describe BRDocuments::IE::MT do
     ]
   end
 
-  # include_examples "IE basic specs"
+  include_examples "IE basic specs"
 end
